@@ -2,6 +2,23 @@
     while(scanf("%s",&cns)&&cns!='\n'){
         a[mem]=cns;
     }
-用 scanf printf 自带的办法（例题是pta里的说反话)
+    
+用 scanf printf 自带的办法（  PAT 1009 说反话)
+对地址要熟悉一下，就是第一列带着一堆第二列，所以给出第一列的地址就行了；
     char a[100][100];
-    scanf("%s",a[0
+    int i=1;
+    char temp;          //用来储存边界的字符
+    scanf("%s",a[0]);   //给第一个地址
+    temp=getchar();     //虽然不必要但是似乎可以避免混乱
+    while(temp!=10){
+        scanf("%s",a[i]);
+        temp=getchar();
+        i++;
+    }
+    printf("%s",a[i-1]);    //其实和我的习惯相反
+    i--;
+    for(i=i-1;i>0;i--){
+        printf(" %s",a[i]);
+    }
+    
+    
