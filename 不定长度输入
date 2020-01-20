@@ -1,0 +1,7 @@
+用 while 的形式 
+    while(scanf("%s",&cns)&&cns!='\n'){
+        a[mem]=cns;
+    }
+用 scanf printf 自带的办法（例题是pta里的说反话)
+    char a[100][100];
+    scanf("%s",a[0
