@@ -10,7 +10,7 @@
     char temp;          //用来储存边界的字符
     scanf("%s",a[0]);   //给第一个地址
     temp=getchar();     //虽然不必要但是似乎可以避免混乱
-    while(temp!=10){
+    while(temp!=10){    //10是'\n'
         scanf("%s",a[i]);
         temp=getchar();
         i++;
