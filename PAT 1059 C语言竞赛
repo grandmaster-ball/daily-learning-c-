@@ -1,0 +1,75 @@
+https://pintia.cn/problem-sets/994805260223102976/problems/994805269828059136
+PAT 1059 C语言竞赛
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+struct Id{
+	int id;
+	int win;
+	int flag;
+}Mem[10000];
+
+int Isprime(int n)
+{
+	int flag=1;
+	for(int i=2;i<=sqrt(n);i++){
+		if(n%i==0){
+			flag=0;
+			return 0;
+		}
+	}
+	return 1;
+}
+
+int main()
+{
+	int n;
+	cin>>n;
+	for(int i=0;i<n;i++){
+		scanf("%d",&Mem[i].id);
+		Mem[i].win=i+1;
+		Mem[i].flag=1;
+	}
+	int t;
+	cin>>t;
+	int temp;
+	for(int i=0;i<t;i++){
+		scanf("%d",&temp);
+		int flag=0;
+		int ww=-1;
+		for(int j=0;j<n;j++){
+			if(Mem[j].id==temp){
+				flag=1;
+				ww=j;
+				break;
+			}
+		}
+		if(flag==0){
+			printf("%04d: Are you kidding?\n",temp);
+			continue;
+		}else{
+			if(Mem[ww].flag==0){
+				printf("%04d: Checked\n",Mem[ww].id);
+				continue;
+			}
+			if(Mem[ww].win==1){
+				printf("%04d: Mystery Award\n",Mem[ww].id);
+				Mem[ww].flag=0;
+				continue;
+			}else{
+				int xww=Isprime(Mem[ww].win);
+				if(xww==0){
+					printf("%04d: Chocolate\n",Mem[ww].id);
+					Mem[ww].flag=0;
+					continue;
+				}else{
+					printf("%04d: Minion\n",Mem[ww].id);
+					Mem[ww].flag=0;
+					continue;
+				}
+			}
+		}
+	}
+}
