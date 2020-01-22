@@ -1,0 +1,4 @@
+关于前导零相关的问题
+printf("%04d", w);
+前面写零就行了;
+printf("%04d: Mystery Award\n",Mem[ww].id);
