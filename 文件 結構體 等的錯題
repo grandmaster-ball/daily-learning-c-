@@ -1,0 +1,117 @@
+对于以下结构定义，++p->str中的++加在____。
+
+struct { 
+    int len; 
+    char *str;
+} *p;
+
+    指针str上
+    指针p上
+    str指的内容上
+    以上均不是
+
+D
+
+设变量定义为 int a[2]={1,3}, *p=&a[0]+1;，则*p的值是( )。
+
+    2
+    3
+    4
+    &a[0]+1
+    
+    
+
+使文件指针重新定位到文件读写的首地址的函数是（）。
+
+    ftell( )
+
+    fseek( )
+
+    rewind ()
+
+    ferror ()
+    
+    若fopen()函数打开文件失败，其返回值是（ ）。
+
+    1
+    -1
+    NULL
+    ERROR
+    
+fputc(ch,fp) 把一个字符ch写到fp所指示的磁盘文件中，若写文件失败则函数的返回值为（ ）。
+
+    0
+    1
+    EOF
+    非0
+
+struct { 
+      int x, y; 
+} s[2] = { { 1, 3 }, { 2, 7 } };
+printf(“%d\n”, s[0].y/s[1].x );   
+
+设有如下定义，则对data中的a成员的正确引用是（）。
+
+struct sk{ int a; float b; } data, *p=&data;
+
+    (*p).data.a
+    (*p).a
+    p->data.a
+    p.data.a
+若有下列语句，则以下引用方式不合法的是（ ）。
+
+struct student
+{  int num;
+   int age;
+};
+struct student stu[3]={{101,20}, {102,19}, {103,20}}, *p=stu;
+
+    (p++)->num
+    p++
+    (*p).num
+    p=&stu.age
+    
+定义如下结构体：
+
+struct sk
+{   
+    int a; 
+    float b;
+}data, *p;
+
+若指针p指向结构体变量data，即有p = &data; ，则对结构体成员a的正确引用是____。
+
+    (*p).data.a
+    (*p).a
+    p->data.a
+    p.data.a
+
+如果二进制文件a.dat已经存在，现在要求写入全新数据，应以（）方式打开。
+
+    "w"
+    "wb"
+    "w+"
+    "wb+"
+
+若有如下定义，struct worker {char name[17]; int age; int score; }x; 且sizeof(int)=4，则变量x在内存中需要的字节数是（ ）。
+
+    17
+    21
+    25
+    4
+
+double sum(int n)
+{
+    if (
+
+){ 
+        
+
+
+    }
+    else{
+        
+
+
+    }
+}
